@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-  background-color: #FFFFFF;
+  background-color: #FCFCFC;
   display: grid;
   grid-template-columns: 600px auto;
 }
@@ -22,6 +22,7 @@ body {
 }
 
 h1 {
+  color: #1E1919;
   margin-top: 3%;
 }
 
@@ -36,10 +37,12 @@ form {
 
 .input {
   height: 55px;
-  width: 380px
+  margin-top: 20%;
+  width: 350px
 }
 
 label {
+  color: #1E1919;
   font-size: 20px;
   font-weight: 600;
   margin-top: 1%;
@@ -55,9 +58,10 @@ label {
 .button {
   background-color: #232222;
   border: none;
-  color: #FFFFFF;
+  color: #FCFCFC;
   font-size: 20px;
   font-weight: 600;
   height: 55px;
+  margin-top: 9%;
   width: 837px;
 }
