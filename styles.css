@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image:
+  url('./images/Beyonce-Lemonade.jpg');
+}
+
+.wrapper {
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 600px auto;
+}
+
+.menu-icon {
+  width: 15%;
+}
+
+h1 {
+  margin-top: 3%;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 600px auto;
+}
