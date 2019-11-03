@@ -73,28 +73,36 @@ label {
 .instruction-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 h2 {
   color: #1E1919;
   font-size: 30px;
   letter-spacing: 1px;
+  margin-top: 7%;
   text-align: center;
 }
 
+.player {
+  color: #E1C06A;
+}
+
 .instruction-box {
-  width: 55%;
+  align-self: center;
+  margin-top: 2%;
+  width: 65%;
 }
 
 .instruction {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 25px;
   padding: 2%;
   text-align: left;
 }
 
 .button {
+  align-self: center;
   background-color: #232222;
   border: none;
   color: #FCFCFC;
@@ -102,7 +110,7 @@ h2 {
   font-weight: 600;
   height: 55px;
   letter-spacing: .5px;
-  margin-top: 9.5%;
+  margin: 4% 0 6% 0;
   width: 745px;
 }
 
