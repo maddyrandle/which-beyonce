@@ -253,7 +253,7 @@ button:hover {
   url('./images/lemonade.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  border: 3px solid #AA8F68;
+  border: 4px solid #AA8F68;
   margin: 2%;
   width: 18%;
 }
