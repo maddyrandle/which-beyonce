@@ -98,7 +98,6 @@ label {
 h2 {
   color: #1E1919;
   font-size: 30px;
-  letter-spacing: 1px;
   margin: 2%;
   text-align: center;
 }
@@ -107,7 +106,7 @@ h2 {
   color: #ECB328;
   font-family: 'Lalezar', sans-serif;
   font-size: 38px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
