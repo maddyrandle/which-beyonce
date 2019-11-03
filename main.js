@@ -1,10 +1,13 @@
 var playerForm = document.querySelector(".player-form");
-var playGameButton = document.querySelector(".button");
+var firstPlayGameButton = document.querySelector(".button");
+var secondPlayGameButton = document.querySelector(".button");
 var playerOneName = document.querySelector(".input-1");
 var playerTwoName = document.querySelector(".input-2");
 var instructionPage = document.querySelector(".instruction-page");
+var gameboardPage = document.querySelector(".gameboard-container");
 
-playGameButton.addEventListener("click", checkNameInput)
+firstPlayGameButton.addEventListener("click", checkNameInput);
+secondPlayGameButton.addEventListener("click", showGameboard)
 
 
 function checkNameInput() {
@@ -20,6 +23,10 @@ function hidePlayerForm() {
   playerForm.style.display = "none";
 }
 
+function hideInstructionPage() {
+  instructionPage.style.display = "none";
+}
+
 function showInstructions(name) {
   var instructionPageHtml = `
     <div class="instruction-page">
@@ -33,4 +40,38 @@ function showInstructions(name) {
     </div>
   `;
       instructionPage.insertAdjacentHTML("afterbegin", instructionPageHtml);
+}
+
+function showGameboard() {
+  var gameboardPageHtml = `
+    <div class="gameboard-container">
+      <aside class="player-1-left">
+        <div class="top-1">
+          <h2 class="gameboard-player-name">${playerOneName.value}</h2>
+        </div>
+        <div class="matches-1">
+          <h2 class="gameboard-matches">MATCHES THIS ROUND</h2>
+          <h1 class="match-count">0</h1>
+        </div>
+        <div class="game-wins-1">
+          <h2 class="wins-1">GAME WINS</h2>
+        </div>
+      </aside>
+      <div class="card-container">
+      </div>
+      <aside class="player-2-right">
+        <div class="top-2">
+          <h2 class="gameboard-player-name">${playerTwoName.value}</h2>
+        </div>
+        <div class="matches-2">
+          <h2 class="gameboard-matches">MATCHES THIS ROUND</h2>
+          <h1 class="match-count">0</h1>
+        </div>
+        <div class="game-wins-2">
+          <h2 class="wins-2">GAME WINS</h2>
+        </div>
+      </aside>
+    </div>
+  `;
+      gameboardPage.insertAdjacentHTML("afterbegin", gameboardPageHtml);
 }

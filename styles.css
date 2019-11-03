@@ -192,29 +192,29 @@ button:hover {
 /* Player side divs */
 .top-1,
 .top-2 {
-border-bottom: 2px solid #AA8F68;
-height: auto;
-margin: 6%;
+  border-bottom: 2px solid #AA8F68;
+  height: auto;
+  margin: 6%;
 }
 
 .matches-1,
 .matches-2 {
-border-bottom: 2px solid #AA8F68;
-height: auto;
-margin: 0 6% 0 6%;
+  border-bottom: 2px solid #AA8F68;
+  height: auto;
+  margin: 0 6% 0 6%;
 }
 
 .game-wins-1,
 .game-wins-2 {
-height: 60%;
-margin: 5%;
+  height: 60%;
+  margin: 5%;
 }
 
 .gameboard-player-name {
   color: #FCFCFC;
   font-size: 22px;
   font-weight: 700;
-  /* text-align: center; */
+  text-transform: uppercase;
 }
 
 .gameboard-matches {
