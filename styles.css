@@ -104,15 +104,10 @@ h2 {
 }
 
 .player {
-  /* color: #FCFCFC; */
+  color: #ECB328;
   font-family: 'Lalezar', sans-serif;
   font-size: 38px;
   letter-spacing: 2px;
-}
-
-.player:hover {
-  color: #ECB328;
-  transition:all .5s ease;
 }
 
 .instruction-box {
