@@ -86,11 +86,13 @@ h2 {
 
 .player {
   color: #E1C06A;
+  font-weight: 800;
 }
 
 .instruction-box {
   align-self: center;
   background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 1px 1px 20px 0px #3A3838;
   margin-top: 6%;
   width: 65%;
 }
@@ -111,8 +113,8 @@ h2 {
   font-weight: 600;
   height: 55px;
   letter-spacing: .5px;
-  margin: 4% 0 6% 0;
-  width: 745px;
+  margin: 6% 0 6% 0;
+  width: 65%;
 }
 
 button:focus {
