@@ -19,14 +19,17 @@ body {
 }
 
 .menu-icon {
-  width: 15%;
+  width: 14%;
 }
 
 h1 {
   color: #1E1919;
+  font-size: 30px;
   letter-spacing: 1px;
-  margin-top: 3%;
+  margin-top: 2%;
 }
+
+/* Enter player names */
 
 form {
   align-items: center;
@@ -39,14 +42,17 @@ form {
 
 .input {
   background-color: #FCFCFC;
+  box-shadow: 1px 1px 20px 1px #3A3838;
   color: #1E1919;
-  font-weight: 600;
-  font-size: 24px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
   height: 55px;
   margin-top: 20%;
   padding-left: 1%;
+  text-align: center;
   text-transform: uppercase;
-  width: 350px
+  width: 400px
 }
 
 .input:focus {
@@ -66,6 +72,15 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: -2%;
+}
+
+.player-1 {
+  margin-left: -10%;
+}
+
+.player-2 {
+  margin-right: -10%;
 }
 
 /* Hidden Instruction page */
@@ -86,9 +101,9 @@ h2 {
 
 .player {
   color: #E1C06A;
-  font-family: 'Bowlby One SC';
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .instruction-box {
@@ -110,6 +125,7 @@ h2 {
   align-self: center;
   background-color: #232222;
   border: none;
+  box-shadow: 1px 1px 20px 1px #3A3838;
   color: #FCFCFC;
   font-size: 24px;
   font-weight: 600;
@@ -117,6 +133,10 @@ h2 {
   letter-spacing: .5px;
   margin: 6% 0 6% 0;
   width: 65%;
+}
+
+.button-1 {
+  margin-top: 32%;
 }
 
 button:focus {
