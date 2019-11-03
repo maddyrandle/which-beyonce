@@ -1,29 +1,27 @@
 var playerForm = document.querySelector(".player-form");
-var playGameButton = document.querySelector(".button");
+var playGameButton = document.querySelector(".button-1");
 var instructionPlayGameButton = document.querySelector(".button-2");
 var playerOneName = document.querySelector(".input-1");
 var playerTwoName = document.querySelector(".input-2");
 var instructionPage = document.querySelector(".instruction-page");
-var gameboardPage = document.querySelector(".gameboard-container");
+var gameboardContainer = document.querySelector(".gameboard-container")
 
 playGameButton.addEventListener("click", checkNameInput);
-playGameButton.addEventListener("click", showGameboard);
+instructionPlayGameButton.addEventListener("click", displayGameboard);
 
 function checkNameInput() {
   if (playerOneName.value.length > 0) {
-    hidePlayerForm();
-    showInstructions();
+    playerForm.style.display = "none";
+    // showInstructions();
+    showGameboard();
   } else {
     alert("ENTER PLAYER NAME(S) TO CONTINUE");
   }
 }
 
-function hidePlayerForm() {
-  playerForm.style.display = "none";
-}
-
-function hideInstructionPage() {
-  instructionPage.style.display = "none";
+function displayGameboard() {
+    instructionPage.style.display = "none";
+    showGameboard();
 }
 
 function showInstructions() {
@@ -34,14 +32,14 @@ function showInstructions() {
       <p class="instruction">To begin playing, the player whose name is highlighted can click any card in the card pile. It will flip over and reveal a picture of Beyoncé. Click another card. If they match, they will disappear and you will have completed a match! If they don’t, you’ll have three seconds to look at them before they flip back over. Then it’s time for the other player to try!</p>
       <p class="instruction">After you play, you’ll see the name of the final winner and how long it took to win the game.</p>
     </div>
-    <button class="button button-2" type="button" name="button">PLAY GAME</button>
+    <button class="button-2 button" type="button" name="button">PLAY GAME</button>
   `;
       instructionPage.insertAdjacentHTML("afterbegin", instructionPageHtml);
 }
 
 function showGameboard() {
   var gameboardPageHtml = `
-    <div class="gameboard-container">
+    <div class="gameboard">
       <aside class="player-1-left">
         <div class="top-1">
           <h2 class="gameboard-player-name">${playerOneName.value}</h2>
@@ -55,6 +53,22 @@ function showGameboard() {
         </div>
       </aside>
       <div class="card-container">
+        <div class="row-1">
+          <div class="card card-1"></div>
+          <div class="card card-2"></div>
+          <div class="card card-3"></div>
+        </div>
+        <div class="row-2">
+          <div class="card card-4"></div>
+          <div class="card card-5"></div>
+          <div class="card card-6"></div>
+          <div class="card card-7"></div>
+        </div>
+        <div class="row-3">
+          <div class="card card-8"></div>
+          <div class="card card-9"></div>
+          <div class="card card-10"></div>
+        </div>
       </div>
       <aside class="player-2-right">
         <div class="top-2">
@@ -70,5 +84,5 @@ function showGameboard() {
       </aside>
     </div>
   `;
-      gameboardPage.insertAdjacentHTML("afterbegin", gameboardPageHtml);
+      gameboardContainer.insertAdjacentHTML("afterbegin", gameboardPageHtml);
 }
