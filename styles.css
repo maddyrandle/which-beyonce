@@ -25,6 +25,7 @@ body {
 h1 {
   color: #1E1919;
   font-size: 30px;
+  font-weight: 700;
   letter-spacing: 1px;
   margin-top: 2%;
 }
@@ -180,7 +181,7 @@ button:hover {
   background-image:
   url('./images/vintage.jpg');
   grid-area: middle;
-  margin: .7% 0 .7% 0;
+  margin: .5% 0 .5% 0;
 }
 
 .player-2-right {
@@ -192,19 +193,46 @@ button:hover {
 .top-1,
 .top-2 {
 border-bottom: 2px solid #AA8F68;
-height: 15%;
+height: auto;
 margin: 6%;
 }
 
 .matches-1,
 .matches-2 {
 border-bottom: 2px solid #AA8F68;
-height: 25%;
-margin: 6%;
+height: auto;
+margin: 0 6% 0 6%;
 }
 
 .game-wins-1,
 .game-wins-2 {
 height: 60%;
 margin: 5%;
+}
+
+.gameboard-player-name {
+  color: #FCFCFC;
+  font-size: 22px;
+  font-weight: 700;
+  /* text-align: center; */
+}
+
+.gameboard-matches {
+  color: #FCFCFC;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 0 5% 0 5%;
+}
+
+.match-count {
+  color: #FCFCFC;
+  font-size: 80px;
+  text-align: center;
+}
+
+.wins-1,
+.wins-2 {
+  color: #FCFCFC;
+  font-size: 22px;
+  font-weight: 700;
 }
