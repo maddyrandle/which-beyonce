@@ -61,7 +61,7 @@ form {
 }
 
 .input:hover {
-  color: #AA8F68;
+  color: #ECB328;
 }
 
 label {
@@ -104,7 +104,7 @@ h2 {
 }
 
 .player {
-  color: #AA8F68;
+  color: #ECB328;
   font-family: 'Lalezar', sans-serif;
   font-size: 38px;
   letter-spacing: 1px;
@@ -148,7 +148,7 @@ button:focus {
 }
 
 button:hover {
-  background-color: #AA8F68;
+  background-color: #ECB328;
   box-shadow: 1px 1px 10px 1px #6E6C6C;
   color: #1E1919;
   transition:all .5s ease;
@@ -241,9 +241,35 @@ button:hover {
 .row-1,
 .row-2,
 .row-3 {
-  border: 1px solid #FCFCFC;
   display: flex;
   flex-direction: row;
-  height: 10%;
+  height: 33.3%;
+  justify-content: space-around;
   width: 100%;
+}
+
+.card {
+  background-image:
+  url('./images/lemonade.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #AA8F68;
+  margin: 2%;
+  width: 18%;
+}
+
+.card-1,
+.card-3,
+.card-5,
+.card-7,
+.card-8,
+.card-10 {
+  transform: rotateZ(13deg);
+}
+
+.card-2,
+.card-4,
+.card-6,
+.card-9 {
+  transform: rotateZ(-13deg);
 }
