@@ -187,3 +187,19 @@ button:hover {
   grid-area: right;
   margin: 2% 2% 2% 0;
 }
+
+/* Player side divs */
+.top-1,
+.top-2 {
+
+}
+
+.matches-1,
+.matches-2 {
+
+}
+
+.game-wins-1,
+.game-wins-2 {
+  
+}
