@@ -108,6 +108,7 @@ h2 {
   font-family: 'Lalezar', sans-serif;
   font-size: 38px;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .instruction-box {
