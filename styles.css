@@ -85,6 +85,10 @@ label {
 
 /* Hidden Instruction page */
 
+.hidden {
+  display: none;
+}
+
 .instruction-page {
   display: flex;
   flex-direction: column;
