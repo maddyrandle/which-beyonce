@@ -248,6 +248,7 @@ button:hover {
 }
 
 .card {
+  background-color: rgba(252, 252, 252, 0.9);
   background-image:
   url('./images/reg-beyonce.png');
   background-repeat: no-repeat;

@@ -1,31 +1,31 @@
 var playerForm = document.querySelector(".player-form");
 var playGameButton = document.querySelector(".button-1");
-var instructionPlayGameButton = document.querySelector(".button-2");
+var playButton = document.querySelector(".button-2").style.display = "none";
 var playerOneName = document.querySelector(".input-1");
 var playerTwoName = document.querySelector(".input-2");
 var instructionPage = document.querySelector(".instruction-page");
-var gameboardContainer = document.querySelector(".gameboard-container")
+var gameboardContainer = document.querySelector(".gameboard-container");
 
 playGameButton.addEventListener("click", checkNameInput);
-instructionPlayGameButton.addEventListener("click", displayGameboard);
+playButton.addEventListener("click", displayGameboard);
 
 function checkNameInput() {
   if (playerOneName.value.length > 0 && playerTwoName.value.length > 0) {
     playerForm.style.display = "none";
     showInstructions();
-    // showGameboard();
   } else {
     alert("ENTER PLAYER NAME(S) TO CONTINUE");
   }
-}
+};
 
 function displayGameboard() {
     instructionPage.style.display = "none";
     showGameboard();
-}
+};
 
 function showInstructions() {
   var instructionPageHtml = `
+    <div class="instruction-page">
     <div class="instruction-box">
       <h2>WELCOME <span class="player">${playerOneName.value}</span> & <span class="player">${playerTwoName.value}</span>!</h2>
       <p class="instruction">The goal of the game is to find all 5 pairs of cards as quickly as possible. The player that finds the greatest numbers of pairs, wins.</p>
@@ -33,9 +33,11 @@ function showInstructions() {
       <p class="instruction">After you play, you’ll see the name of the final winner and how long it took to win the game.</p>
     </div>
     <button class="button-2 button" type="button" name="button">PLAY GAME</button>
+    </div>
   `;
       instructionPage.insertAdjacentHTML("afterbegin", instructionPageHtml);
-}
+
+};
 
 function showGameboard() {
   var gameboardPageHtml = `
@@ -85,4 +87,4 @@ function showGameboard() {
     </div>
   `;
       gameboardContainer.insertAdjacentHTML("afterbegin", gameboardPageHtml);
-}
+};
