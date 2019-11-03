@@ -61,7 +61,7 @@ form {
 }
 
 .input:hover {
-  color: #ECB328;
+  color: #AA8F68;
 }
 
 label {
@@ -104,7 +104,7 @@ h2 {
 }
 
 .player {
-  color: #ECB328;
+  color: #AA8F68;
   font-family: 'Lalezar', sans-serif;
   font-size: 38px;
   letter-spacing: 1px;
@@ -148,9 +148,9 @@ button:focus {
 }
 
 button:hover {
-  background-color: #ECB328;
+  background-color: #AA8F68;
   box-shadow: 1px 1px 10px 1px #6E6C6C;
-  color: #3A3A3A;
+  color: #1E1919;
   transition:all .5s ease;
 }
 
