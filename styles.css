@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   margin: 0px;
   padding: 0px;
 }
@@ -86,7 +86,9 @@ h2 {
 
 .player {
   color: #E1C06A;
+  font-family: 'Bowlby One SC';
   font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .instruction-box {
@@ -98,7 +100,7 @@ h2 {
 }
 
 .instruction {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 25px;
   padding: 2%;
   text-align: left;
