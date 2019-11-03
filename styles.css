@@ -163,8 +163,13 @@ button:hover {
   "left middle right";
 }
 
+.player-1-left,
+.player-2-right {
+  background-color: rgba(30, 25, 25, 0.9);
+  margin: 2%;
+}
+
 .player-1-left {
-  border: 2px solid red;
   grid-area: left;
 }
 
@@ -174,6 +179,5 @@ button:hover {
 }
 
 .player-2-right {
-  border: 2px solid orange;
   grid-area: right;
 }
