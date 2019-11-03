@@ -78,11 +78,20 @@ label {
 
 h2 {
   color: #1E1919;
+  font-size: 30px;
   letter-spacing: 1px;
+  text-align: center;
+}
+
+.instruction-box {
+  width: 55%;
 }
 
 .instruction {
-
+  font-weight: 600;
+  font-size: 22px;
+  padding: 2%;
+  text-align: left;
 }
 
 .button {
