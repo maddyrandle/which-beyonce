@@ -167,7 +167,8 @@ button:hover {
 .player-1-left,
 .player-2-right {
   background-color: rgba(42, 42, 42, 0.9);
-  box-shadow: 1px 1px 10px 0px #232222;
+  display: flex;
+  flex-direction: column;
 }
 
 .player-1-left {
