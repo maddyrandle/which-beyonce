@@ -80,7 +80,7 @@ h2 {
   color: #1E1919;
   font-size: 30px;
   letter-spacing: 1px;
-  margin-top: 7%;
+  margin: 2%;
   text-align: center;
 }
 
@@ -90,7 +90,8 @@ h2 {
 
 .instruction-box {
   align-self: center;
-  margin-top: 2%;
+  background-color: rgba(252, 252, 252, 0.4);
+  margin-top: 6%;
   width: 65%;
 }
 
