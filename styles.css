@@ -91,6 +91,7 @@ label {
 /* Hidden Instruction page */
 
 .instruction-page {
+  /* background-color: rgba(252, 252, 252, 0.3); */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -113,7 +114,7 @@ h2 {
 
 .instruction-box {
   align-self: center;
-  background-color: rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.7);
   box-shadow: 1px 1px 10px 0px #6E6C6C;
   margin-top: 6%;
   width: 65%;
@@ -156,7 +157,6 @@ button:hover {
 
 /* Gameboard */
 .gameboard {
-  /* background-color: #1E1919; */
   display: grid;
   grid-template-columns: .8fr 3fr .8fr;
   grid-template-areas:
@@ -174,12 +174,12 @@ button:hover {
 
 .player-1-left {
   grid-area: left;
-  margin: 5% 0 5% 5%;
+  margin: 15px 0 15px 15px;
 }
 
 .player-2-right {
   grid-area: right;
-  margin: 5% 5% 5% 0;
+  margin: 15px 15px 15px 0;
 }
 
 /* Player side divs */
@@ -234,7 +234,7 @@ button:hover {
 .card-container {
   background-color: rgba(252, 252, 252, 0.3);
   grid-area: middle;
-  margin: 1.5% 0 1.5% 0;
+  margin: 15px 0 15px 0;
 }
 
 .row-1,

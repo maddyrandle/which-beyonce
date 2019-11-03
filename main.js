@@ -10,10 +10,10 @@ playGameButton.addEventListener("click", checkNameInput);
 instructionPlayGameButton.addEventListener("click", displayGameboard);
 
 function checkNameInput() {
-  if (playerOneName.value.length > 0) {
+  if (playerOneName.value.length > 0 && playerTwoName.value.length > 0) {
     playerForm.style.display = "none";
-    // showInstructions();
-    showGameboard();
+    showInstructions();
+    // showGameboard();
   } else {
     alert("ENTER PLAYER NAME(S) TO CONTINUE");
   }
@@ -27,7 +27,7 @@ function displayGameboard() {
 function showInstructions() {
   var instructionPageHtml = `
     <div class="instruction-box">
-      <h2>WELCOME <span class="player">${playerOneName.value}</span>!</h2>
+      <h2>WELCOME <span class="player">${playerOneName.value}</span> & <span class="player">${playerTwoName.value}</span>!</h2>
       <p class="instruction">The goal of the game is to find all 5 pairs of cards as quickly as possible. The player that finds the greatest numbers of pairs, wins.</p>
       <p class="instruction">To begin playing, the player whose name is highlighted can click any card in the card pile. It will flip over and reveal a picture of Beyoncé. Click another card. If they match, they will disappear and you will have completed a match! If they don’t, you’ll have three seconds to look at them before they flip back over. Then it’s time for the other player to try!</p>
       <p class="instruction">After you play, you’ll see the name of the final winner and how long it took to win the game.</p>
