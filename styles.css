@@ -155,6 +155,7 @@ button:hover {
 
 /* Gameboard */
 .gameboard-container {
+  background-color: #AA8F68;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas:
@@ -165,7 +166,7 @@ button:hover {
 
 .player-1-left,
 .player-2-right {
-  background-color: rgba(30, 25, 25, 0.9);
+  background-color: rgba(42, 42, 42, 0.9);
   box-shadow: 1px 1px 10px 0px #232222;
 }
 
