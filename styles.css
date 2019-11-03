@@ -8,12 +8,14 @@
 body {
   background-image:
   url('./images/Beyonce-Lemonade.jpg');
+  background-repeat: no-repeat;
 }
 
 .wrapper {
-  background-color: #FFFFFF;
+  box-shadow: 1px 1px 20px 5px #3A3838;
+  background-color: #FCFCFC;
   display: grid;
-  grid-template-columns: 600px auto;
+  grid-template-columns: 580px auto;
 }
 
 .menu-icon {
@@ -21,10 +23,90 @@ body {
 }
 
 h1 {
+  color: #1E1919;
+  letter-spacing: 1px;
   margin-top: 3%;
 }
 
-.main-wrapper {
-  display: grid;
-  grid-template-columns: 600px auto;
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  height: 300px;
+  justify-content: space-around;
+}
+
+.input {
+  background-color: #FCFCFC;
+  color: #1E1919;
+  font-weight: 600;
+  font-size: 24px;
+  height: 55px;
+  margin-top: 20%;
+  padding-left: 1%;
+  text-transform: uppercase;
+  width: 350px
+}
+
+.input:focus {
+  outline: none;
+}
+
+label {
+  color: #1E1919;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 1%;
+}
+
+.player-1,
+.player-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hidden Instruction page */
+
+.instruction-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  color: #1E1919;
+  letter-spacing: 1px;
+}
+
+.instruction {
+
+}
+
+.button {
+  background-color: #232222;
+  border: none;
+  color: #FCFCFC;
+  font-size: 24px;
+  font-weight: 600;
+  height: 55px;
+  letter-spacing: .5px;
+  margin-top: 9.5%;
+  width: 745px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #E1C06A;
+  box-shadow: 1px 1px 20px 1px #3A3838;
+  color: #1E1919;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  transition:all .5s ease;
 }
