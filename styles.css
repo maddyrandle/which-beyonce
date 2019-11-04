@@ -248,7 +248,7 @@ button:hover {
 }
 
 .memory-card {
-  border: 1.5px solid #1E1919;
+  border: 1px solid #1E1919;
   border-radius: 5px;
   box-shadow: 1px 1px 5px 1px #3A3838;
   height: 190px;
@@ -264,12 +264,12 @@ button:hover {
 }
 
 .memory-card:hover {
-  border: 2px solid #ECB328;
+  border: 1.5px solid #ECB328;
   border-radius: 5px;
   box-shadow: 1px 1px 10px 1px #6E6C6C;
 }
 
-.front {
+.back {
   transform: rotateY(180deg);
 }
 
@@ -277,9 +277,9 @@ button:hover {
 .back {
   background-color: rgba(252, 252, 252, 0.8);
   backface-visibility: hidden;
-  border-radius: 5px;
+  border-radius: 2px;
   height: 100%;
-  padding: 7px;
+  padding: 25px;
   position: absolute;
   width: 100%;
 }

@@ -10,9 +10,13 @@ var cards = document.querySelectorAll(".memory-card");
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
 cards.forEach(card => card.addEventListener("click", flipCard));
+// cards.addEventListener("click", flipCard);
 
 function flipCard() {
   this.classList.toggle("flip");
+ //  for (var i = 0; i < cards.length; i++) {
+ //     cards[i].toggle();
+ // }
 }
 
 function showInstructions() {
