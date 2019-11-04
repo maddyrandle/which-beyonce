@@ -16,7 +16,6 @@ let firstCard, secondCard;
 
 function flipCard() {
   this.classList.add("flip");
-
   if (!matched) {
     // first click
     matched = true;
@@ -26,22 +25,27 @@ function flipCard() {
   // second click
   secondCard = this;
   matched = false;
-  // do cards macth?
+  // do cards match?
   match();
 }
 
 function match() {
-  if (firstCard.dataset.matchInfo === secondCard.dataset.matchInfo) {
-    // It's a match!
-    firstCard.removeEventListener("click", flipCard);
-    secondCard.removeEventListener("click", flipCard);
-  } else {
-    // not a match
-    setTimeout(() => {
+  let isMatch = firstCard.dataset.matchInfo === secondCard.dataset.matchInfo;
+  isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+  // It's a match!
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+}
+
+function unflipCards() {
+  // Not a match.
+  setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
-  }, 1500);
-  }
+}, 1500);
 }
 
 function showInstructions() {
