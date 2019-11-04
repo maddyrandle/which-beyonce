@@ -259,6 +259,7 @@ button:hover {
   height: 190px;
   margin: 25px;
   transform-style: preserve-3d;
+  transition: transform .5s;
   width: 190px;
 }
 
