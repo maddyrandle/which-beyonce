@@ -5,17 +5,29 @@ var playButton1 = document.querySelector(".button-1");
 var playButton2 = document.querySelector(".button-2");
 var playerOneName = document.querySelector(".name-input-1");
 var playerTwoName = document.querySelector(".name-input-2");
+var cards = document.querySelectorAll(".memory-card");
 
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
+cards.forEach(card => card.addEventListener("click", flipCard));
+// cards.addEventListener("click", flipCard);
+
+function flipCard() {
+  this.classList.toggle("flip");
+ //  for (var i = 0; i < cards.length; i++) {
+ //     cards[i].toggle();
+ // }
+}
 
 function showInstructions() {
+  interpolatePlayerName1();
   frontPage.classList.add("hidden");
   gameBoard.classList.add("hidden");
   instructions.classList.remove("hidden");
 }
 
 function showGameboard() {
+  interpolatePlayerName2();
   frontPage.classList.add("hidden");
   gameBoard.classList.remove("hidden");
   instructions.classList.add("hidden");
@@ -23,12 +35,10 @@ function showGameboard() {
 
 function firstClickOnPlay() {
   validateName();
-  interpolatePlayerName1();
 }
 
 function secondClickOnPlay() {
   showGameboard()
-  interpolatePlayerName2();
 }
 
 function validateName() {
@@ -38,7 +48,7 @@ function validateName() {
     alert("ENTER PLAYER NAME(S) TO CONTINUE");
   }
 }
-
+// Refactor...
 function interpolatePlayerName1() {
   var interpolate1 = document.querySelector(".interpolate-1");
   var interpolate2 = document.querySelector(".interpolate-2");
@@ -52,6 +62,7 @@ function interpolatePlayerName2() {
   interpolate3.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-3">${playerOneName.value}</h2>`);
   interpolate4.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-4">${playerTwoName.value}</h2>`);
 }
+
 
 
 // Original attempt to add other pages' html in the JavaScript.

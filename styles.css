@@ -32,7 +32,6 @@ h1 {
 }
 
 /* Front Page */
-
 form {
   align-items: center;
   display: flex;
@@ -92,7 +91,6 @@ label {
 }
 
 /* Instructions */
-
 .instruction-page {
   display: flex;
   flex-direction: column;
@@ -158,7 +156,6 @@ button:hover {
 }
 
 /* Gameboard */
-
 .gameboard {
   display: grid;
   grid-template-columns: .8fr 3fr .8fr;
@@ -174,7 +171,7 @@ button:hover {
   box-shadow: 1px 1px 5px 1px #3A3838;
   display: flex;
   flex-direction: column;
-  height: 108%;
+  height: 97%;
   margin: 10px 0;
 }
 
@@ -184,7 +181,6 @@ button:hover {
 }
 
 .memory-card-container {
-  /* background-color: rgba(252, 252, 252, 0.3); */
   grid-area: middle;
   margin: 10px 0;
 }
@@ -194,8 +190,7 @@ button:hover {
   margin-right: 10px;
 }
 
-/* Player Stats Top to Bottom */
-
+/* Player Stats Sections Top to Bottom */
 .top,
 .middle,
 .bottom {
@@ -243,33 +238,50 @@ button:hover {
 }
 
 /* Memory Card Style */
-
 .row {
   display: flex;
-  flex-direction: row;
-  height: 33.3%;
+  height: 33.333%;
   justify-content: space-around;
+  margin: 20px 0;
+  perspective: 1000px;
   width: 100%;
 }
 
 .memory-card {
-  background-color: rgba(252, 252, 252, 0.8);
-  background-image:
-  url('./images/reg-beyonce.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1.5px solid #1E1919;
+  border: 1px solid #1E1919;
+  border-radius: 5px;
   box-shadow: 1px 1px 5px 1px #3A3838;
   height: 190px;
   margin: 25px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .5s;
   width: 190px;
 }
 
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
 .memory-card:hover {
-  background-image:
-  url('./images/hover-beyonce.png');
-  border: 2px solid #ECB328;
+  border: 1.5px solid #ECB328;
+  border-radius: 5px;
   box-shadow: 1px 1px 10px 1px #6E6C6C;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  background-color: rgba(252, 252, 252, 0.8);
+  backface-visibility: hidden;
+  border-radius: 2px;
+  height: 100%;
+  padding: 25px;
+  position: absolute;
+  width: 100%;
 }
 
 .one,
