@@ -11,11 +11,9 @@ playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
 cards.forEach(card => card.addEventListener("click", flipCard));
 
+let matched = false;
+let firstCard, secondCard;
 
-function flipCard() {
-  this.classList.toggle("flip");
-
-}
 
 function showInstructions() {
   interpolatePlayerName1();
