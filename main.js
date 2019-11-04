@@ -9,6 +9,8 @@ var cards = document.querySelectorAll(".memory-card");
 
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
+// forEach() executes the function once for each array element
+// 
 cards.forEach(card => card.addEventListener("click", flipCard));
 // cards.addEventListener("click", flipCard);
 

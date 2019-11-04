@@ -121,8 +121,8 @@ span {
 }
 
 p {
-  font-weight: 400;
   font-size: 25px;
+  font-weight: 400;
   padding: 2%;
   text-align: justify;
 }
@@ -162,7 +162,6 @@ button:hover {
   grid-template-areas:
   "left middle right"
   "left middle right";
-  /* height: 100vh; */
 }
 
 .stats-container-1,
@@ -275,8 +274,8 @@ button:hover {
 
 .front,
 .back {
-  background-color: rgba(252, 252, 252, 0.8);
   backface-visibility: hidden;
+  background-color: rgba(252, 252, 252, 0.8);
   border-radius: 2px;
   height: 100%;
   padding: 25px;
