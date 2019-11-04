@@ -282,6 +282,10 @@ button:hover {
   width: 100px;
 }
 
+.front,
+.back {
+  backface-visibility: hidden;
+}
 
 .one,
 .three,
