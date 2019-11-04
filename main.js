@@ -6,28 +6,29 @@ var playButton2 = document.querySelector(".button-2");
 var playerOneName = document.querySelector(".name-input-1");
 var playerTwoName = document.querySelector(".name-input-2");
 
-
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
 
 function showInstructions() {
-    frontPage.classList.add("hidden");
-    gameBoard.classList.add("hidden");
-    instructions.classList.remove("hidden");
+  frontPage.classList.add("hidden");
+  gameBoard.classList.add("hidden");
+  instructions.classList.remove("hidden");
 }
 
 function showGameboard() {
-    frontPage.classList.add("hidden");
-    gameBoard.classList.remove("hidden");
-    instructions.classList.add("hidden");
+  frontPage.classList.add("hidden");
+  gameBoard.classList.remove("hidden");
+  instructions.classList.add("hidden");
 }
 
 function firstClickOnPlay() {
   validateName();
+  interpolatePlayerName1();
 }
 
 function secondClickOnPlay() {
   showGameboard()
+  interpolatePlayerName2();
 }
 
 function validateName() {
@@ -38,7 +39,19 @@ function validateName() {
   }
 }
 
+function interpolatePlayerName1() {
+  var interpolate1 = document.querySelector(".interpolate-1");
+  var interpolate2 = document.querySelector(".interpolate-2");
+  interpolate1.insertAdjacentHTML("afterbegin", `<span class="interpolate-1">${playerOneName.value}</span>`);
+  interpolate2.insertAdjacentHTML("afterbegin", `<span class="interpolate-2">${playerTwoName.value}</span>`);
+}
 
+function interpolatePlayerName2() {
+  var interpolate3 = document.querySelector(".interpolate-3");
+  var interpolate4 = document.querySelector(".interpolate-4");
+  interpolate3.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-3">${playerOneName.value}</h2>`);
+  interpolate4.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-4">${playerTwoName.value}</h2>`);
+}
 
 
 // Original attempt to add other pages' html in the JavaScript.
