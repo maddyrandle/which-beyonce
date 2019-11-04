@@ -22,15 +22,19 @@ function flipCard() {
     matched = true;
     firstCard = this;
     return;
-  } else {
-    // second click
-    secondCard = this;
-    matched = false;
-
-    match();
   }
+  // second click
+  secondCard = this;
+  matched = false;
+  // do cards macth?
+  match();
 }
 
+function match() {
+  if (firstCard.dataset.matchInfo === secondCard.dataset.matchInfo) {
+
+  }
+}
 
 function showInstructions() {
   interpolatePlayerName1();
