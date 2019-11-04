@@ -240,8 +240,7 @@ button:hover {
 /* Memory Card Style */
 .row {
   display: flex;
-  flex-direction: row;
-  height: 33.3%;
+  height: 33.333%;
   justify-content: space-around;
   margin: 20px 0;
   perspective: 1000px;
@@ -249,15 +248,12 @@ button:hover {
 }
 
 .memory-card {
-  background-color: rgba(252, 252, 252, 0.8);
-  /* background-image:
-  url('./images/reg-beyonce.png'); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
   border: 1.5px solid #1E1919;
+  border-radius: 5px;
   box-shadow: 1px 1px 5px 1px #3A3838;
   height: 190px;
   margin: 25px;
+  position: relative;
   transform-style: preserve-3d;
   transition: transform .5s;
   width: 190px;
@@ -269,20 +265,24 @@ button:hover {
 
 .memory-card:hover {
   border: 2px solid #ECB328;
+  border-radius: 5px;
   box-shadow: 1px 1px 10px 1px #6E6C6C;
+}
+
+.front {
+  transform: rotateY(180deg);
 }
 
 .front,
 .back {
+  background-color: rgba(252, 252, 252, 0.8);
   backface-visibility: hidden;
-  width: inherit;
+  border-radius: 5px;
+  height: 100%;
+  padding: 7px;
+  position: absolute;
+  width: 100%;
 }
-
-.front {
-  /* width: inherit; */
-  transform: rotateY(180deg);
-}
-
 
 .one,
 .three,
