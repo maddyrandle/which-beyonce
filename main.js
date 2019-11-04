@@ -32,7 +32,9 @@ function flipCard() {
 
 function match() {
   if (firstCard.dataset.matchInfo === secondCard.dataset.matchInfo) {
-
+    // It's a match!
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
   }
 }
 
