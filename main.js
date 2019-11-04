@@ -14,6 +14,23 @@ cards.forEach(card => card.addEventListener("click", flipCard));
 let matched = false;
 let firstCard, secondCard;
 
+function flipCard() {
+  this.classList.add("flip");
+
+  if (!matched) {
+    // first click
+    matched = true;
+    firstCard = this;
+    return;
+  } else {
+    // second click
+    secondCard = this;
+    matched = false;
+
+    match();
+  }
+}
+
 
 function showInstructions() {
   interpolatePlayerName1();
