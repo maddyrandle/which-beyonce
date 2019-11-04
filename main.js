@@ -35,6 +35,10 @@ function match() {
     // It's a match!
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
+  } else {
+    // not a match
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
   }
 }
 
