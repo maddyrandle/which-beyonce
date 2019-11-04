@@ -5,20 +5,16 @@ var playButton1 = document.querySelector(".button-1");
 var playButton2 = document.querySelector(".button-2");
 var playerOneName = document.querySelector(".name-input-1");
 var playerTwoName = document.querySelector(".name-input-2");
-var cards = document.querySelectorAll(".memory-card");
+var cards = document.querySelectorAll(".card");
 
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
-// forEach() executes the function once for each array element
-// 
 cards.forEach(card => card.addEventListener("click", flipCard));
-// cards.addEventListener("click", flipCard);
+
 
 function flipCard() {
   this.classList.toggle("flip");
- //  for (var i = 0; i < cards.length; i++) {
- //     cards[i].toggle();
- // }
+
 }
 
 function showInstructions() {
@@ -64,6 +60,10 @@ function interpolatePlayerName2() {
   interpolate3.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-3">${playerOneName.value}</h2>`);
   interpolate4.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-4">${playerTwoName.value}</h2>`);
 }
+
+
+
+
 
 
 
