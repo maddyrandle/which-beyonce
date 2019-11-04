@@ -244,6 +244,7 @@ button:hover {
   height: 33.3%;
   justify-content: space-around;
   margin: 20px 0;
+  perspective: 1000px;
   width: 100%;
 }
 
@@ -257,6 +258,7 @@ button:hover {
   box-shadow: 1px 1px 5px 1px #3A3838;
   height: 190px;
   margin: 25px;
+  transform-style: preserve-3d;
   width: 190px;
 }
 
