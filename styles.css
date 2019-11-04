@@ -249,10 +249,10 @@ button:hover {
 
 .memory-card {
   background-color: rgba(252, 252, 252, 0.8);
-  background-image:
-  url('./images/reg-beyonce.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-image:
+  url('./images/reg-beyonce.png'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
   border: 1.5px solid #1E1919;
   box-shadow: 1px 1px 5px 1px #3A3838;
   height: 190px;
@@ -260,12 +260,25 @@ button:hover {
   width: 190px;
 }
 
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
 .memory-card:hover {
-  background-image:
-  url('./images/hover-beyonce.png');
+  /* background-image:
+  url('./images/hover-beyonce.png'); */
   border: 2px solid #ECB328;
   box-shadow: 1px 1px 10px 1px #6E6C6C;
 }
+
+.front {
+  width: inherit;
+}
+
+.back {
+  width: 100px;
+}
+
 
 .one,
 .three,

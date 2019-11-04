@@ -5,9 +5,15 @@ var playButton1 = document.querySelector(".button-1");
 var playButton2 = document.querySelector(".button-2");
 var playerOneName = document.querySelector(".name-input-1");
 var playerTwoName = document.querySelector(".name-input-2");
+var cards = document.querySelectorAll(".memory-card");
 
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
+cards.forEach(card => card.addEventListener("click", flipCard));
+
+function flipCard() {
+  this.classList.toggle("flip");
+}
 
 function showInstructions() {
   interpolatePlayerName1();
