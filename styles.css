@@ -268,24 +268,21 @@ button:hover {
 }
 
 .memory-card:hover {
-  /* background-image:
-  url('./images/hover-beyonce.png'); */
   border: 2px solid #ECB328;
   box-shadow: 1px 1px 10px 1px #6E6C6C;
-}
-
-.front {
-  width: inherit;
-}
-
-.back {
-  width: 100px;
 }
 
 .front,
 .back {
   backface-visibility: hidden;
+  width: inherit;
 }
+
+.front {
+  /* width: inherit; */
+  transform: rotateY(180deg);
+}
+
 
 .one,
 .three,
