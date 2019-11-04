@@ -17,6 +17,7 @@ function showInstructions() {
 }
 
 function showGameboard() {
+  interpolatePlayerName2();
   frontPage.classList.add("hidden");
   gameBoard.classList.remove("hidden");
   instructions.classList.add("hidden");
@@ -28,7 +29,6 @@ function firstClickOnPlay() {
 
 function secondClickOnPlay() {
   showGameboard()
-  interpolatePlayerName2();
 }
 
 function validateName() {
