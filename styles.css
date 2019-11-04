@@ -44,7 +44,7 @@ form {
 
 .name-input-1,
 .name-input-2 {
-  background-color: rgba(252, 252, 252, 0.9);
+  background-color: rgba(252, 252, 252, 0.8);
   border: none;
   box-shadow: 1px 1px 5px 1px #6E6C6C;
   color: #1E1919;
@@ -91,8 +91,7 @@ label {
   margin-right: -10%;
 }
 
-
-/* Instruction Page */
+/* Instructions */
 
 .instruction-page {
   display: flex;
@@ -103,7 +102,7 @@ label {
 h2 {
   color: #1E1919;
   font-size: 30px;
-  margin: 2%;
+  margin: 2% 2% 0;
   text-align: center;
 }
 
@@ -127,11 +126,8 @@ p {
   font-weight: 400;
   font-size: 25px;
   padding: 2%;
-  text-align: left;
+  text-align: justify;
 }
-
-
-/* Buttons */
 
 button {
   align-self: center;
@@ -150,7 +146,6 @@ button {
   margin-top: 33%;
 }
 
-/* can this be refactored with .button:focus:hover?? */
 button:focus {
   outline: none;
 }
@@ -162,7 +157,6 @@ button:hover {
   transition:all .5s ease;
 }
 
-
 /* Gameboard */
 
 .gameboard {
@@ -171,7 +165,7 @@ button:hover {
   grid-template-areas:
   "left middle right"
   "left middle right";
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .stats-container-1,
@@ -180,26 +174,28 @@ button:hover {
   box-shadow: 1px 1px 5px 1px #3A3838;
   display: flex;
   flex-direction: column;
-  margin: 12px 0;
+  height: 108%;
+  margin: 10px 0;
 }
 
 .stats-container-1 {
   grid-area: left;
-  margin-left: 12px;
+  margin-left: 10px;
 }
 
 .memory-card-container {
   /* background-color: rgba(252, 252, 252, 0.3); */
   grid-area: middle;
-  margin: 12px 0 12px 0;
+  margin: 10px 0;
 }
 
 .stats-container-2 {
   grid-area: right;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
-/* Player side divs */
+/* Player Stats Top to Bottom */
+
 .top,
 .middle,
 .bottom {
@@ -221,6 +217,7 @@ button:hover {
   color: #FCFCFC;
   font-size: 22px;
   font-weight: 700;
+  padding: 5%;
   text-transform: uppercase;
 }
 
@@ -244,7 +241,6 @@ button:hover {
   font-size: 22px;
   font-weight: 700;
 }
-
 
 /* Memory Card Style */
 

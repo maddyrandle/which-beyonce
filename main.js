@@ -1,60 +1,59 @@
 var frontPage = document.querySelector(".front-page");
-var instructions = document.querySelector(".instruction-page");
 var gameBoard = document.querySelector(".gameboard");
+var instructions = document.querySelector(".instruction-page");
 var playButton1 = document.querySelector(".button-1");
 var playButton2 = document.querySelector(".button-2");
-var playerName1 = document.querySelector(".name-input-1");
-var playerName2 = document.querySelector(".name-input-2");
+var playerOneName = document.querySelector(".name-input-1");
+var playerTwoName = document.querySelector(".name-input-2");
 
 
-playButton1.addEventListener("click", firstOnPlayClick);
-playButton2.addEventListener("click", secondOnPlayClick);
+playButton1.addEventListener("click", firstClickOnPlay);
+playButton2.addEventListener("click", secondClickOnPlay);
 
-
-function firstOnPlayClick() {
-  validateName();
-
+function showInstructions() {
+    frontPage.classList.add("hidden");
+    gameBoard.classList.add("hidden");
+    instructions.classList.remove("hidden");
 }
 
-function secondOnPlayClick() {
+function showGameboard() {
+    frontPage.classList.add("hidden");
+    gameBoard.classList.remove("hidden");
+    instructions.classList.add("hidden");
+}
+
+function firstClickOnPlay() {
+  validateName();
+}
+
+function secondClickOnPlay() {
   showGameboard()
 }
 
 function validateName() {
-  if (playerName1.value.length > 0 && playerName2.value.length > 0) {
+  if (playerOneName.value.length > 0 && playerTwoName.value.length > 0) {
     showInstructions();
   } else {
     alert("ENTER PLAYER NAME(S) TO CONTINUE");
   }
 }
 
-function showInstructions() {
-    instructions.classList.remove("hidden");
-    frontPage.classList.add("hidden");
-    gameBoard.classList.add("hidden");
-}
 
-function showGameboard() {
-    gameBoard.classList.remove("hidden");
-    instructions.classList.add("hidden");
-    frontPage.classList.add("hidden");
-}
 
+
+// Original attempt to add other pages' html in the JavaScript.
 
 // function showInstructions() {
-//   playGameButton.classList.add("hidden");
 //   var instructionPageHtml = `
-//     <div class="instruction-page hidden">
-//     <div class="instruction-box">
+//     <div class="instruction-page">
 //       <h2>WELCOME <span class="player">${playerOneName.value}</span> & <span class="player">${playerTwoName.value}</span>!</h2>
 //       <p class="instruction">The goal of the game is to find all 5 pairs of cards as quickly as possible. The player that finds the greatest numbers of pairs, wins.</p>
 //       <p class="instruction">To begin playing, the player whose name is highlighted can click any card in the card pile. It will flip over and reveal a picture of Beyoncé. Click another card. If they match, they will disappear and you will have completed a match! If they don’t, you’ll have three seconds to look at them before they flip back over. Then it’s time for the other player to try!</p>
 //       <p class="instruction">After you play, you’ll see the name of the final winner and how long it took to win the game.</p>
 //     </div>
 //     <button class="button-2 button" type="button" name="button">PLAY GAME</button>
-//     </div>
 //   `;
-//       instructionPage.insertAdjacentHTML("afterbegin", instructionPageHtml);
+//       instructions.insertAdjacentHTML("afterbegin", instructionPageHtml);
 // }
 //
 // function showGameboard() {
