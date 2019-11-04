@@ -10,6 +10,7 @@ playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
 
 function showInstructions() {
+  interpolatePlayerName1();
   frontPage.classList.add("hidden");
   gameBoard.classList.add("hidden");
   instructions.classList.remove("hidden");
@@ -23,7 +24,6 @@ function showGameboard() {
 
 function firstClickOnPlay() {
   validateName();
-  interpolatePlayerName1();
 }
 
 function secondClickOnPlay() {
@@ -38,7 +38,7 @@ function validateName() {
     alert("ENTER PLAYER NAME(S) TO CONTINUE");
   }
 }
-
+// Refactor...
 function interpolatePlayerName1() {
   var interpolate1 = document.querySelector(".interpolate-1");
   var interpolate2 = document.querySelector(".interpolate-2");
@@ -52,6 +52,7 @@ function interpolatePlayerName2() {
   interpolate3.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-3">${playerOneName.value}</h2>`);
   interpolate4.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-4">${playerTwoName.value}</h2>`);
 }
+
 
 
 // Original attempt to add other pages' html in the JavaScript.
