@@ -15,7 +15,9 @@ let lockFlip = false;
 let firstCard, secondCard;
 
 function flipCard() {
-
+  if (!lockFlip) {
+    return;
+  }
   this.classList.add("flip");
   if (!matched) {
     // first click
