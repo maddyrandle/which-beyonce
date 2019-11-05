@@ -1,4 +1,5 @@
 var cards = document.querySelectorAll(".card");
+var frontPage = document.querySelector(".front-page");
 var gameBoard = document.querySelector(".gameboard");
 var instructions = document.querySelector(".instruction-page");
 var playButton1 = document.querySelector(".button-1");
@@ -15,9 +16,8 @@ let lockFlip = false;
 let firstCard, secondCard;
 
 function flipCard() {
-  if (!lockFlip) {
-    return;
-  }
+  if (lockFlip) return;
+  if (this === firstCard) return;
   this.classList.add("flip");
   if (!matched) {
     // first click
@@ -26,7 +26,6 @@ function flipCard() {
     return;
   }
   // second click
-  matched = false;
   secondCard = this;
   match();
 }
@@ -41,15 +40,22 @@ function match() {
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
+  resetBoard();
 }
 
 // not a match
 function unflipCards() {
-
+  lockFlip = true;
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
+    resetBoard();
   }, 1500);
+}
+
+function resetBoard() {
+  [matched, lockFlip] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
 
 function showInstructions() {
