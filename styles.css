@@ -179,7 +179,7 @@ button:hover {
   margin-left: 10px;
 }
 
-.memory-card-container {
+.card-container {
   grid-area: middle;
   margin: 10px 0;
 }
@@ -246,7 +246,7 @@ button:hover {
   width: 100%;
 }
 
-.memory-card {
+.card {
   border: 1px solid #1E1919;
   border-radius: 5px;
   box-shadow: 1px 1px 5px 1px #3A3838;
@@ -258,11 +258,11 @@ button:hover {
   width: 190px;
 }
 
-.memory-card.flip {
+.card.flip {
   transform: rotateY(180deg);
 }
 
-.memory-card:hover {
+.card:hover {
   border: 1.5px solid #ECB328;
   border-radius: 5px;
   box-shadow: 1px 1px 10px 1px #6E6C6C;

@@ -1,3 +1,4 @@
+var cards = document.querySelectorAll(".card");
 var frontPage = document.querySelector(".front-page");
 var gameBoard = document.querySelector(".gameboard");
 var instructions = document.querySelector(".instruction-page");
@@ -5,20 +6,56 @@ var playButton1 = document.querySelector(".button-1");
 var playButton2 = document.querySelector(".button-2");
 var playerOneName = document.querySelector(".name-input-1");
 var playerTwoName = document.querySelector(".name-input-2");
-var cards = document.querySelectorAll(".memory-card");
 
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
-// forEach() executes the function once for each array element
-// 
 cards.forEach(card => card.addEventListener("click", flipCard));
-// cards.addEventListener("click", flipCard);
+
+let matched = false;
+let lockFlip = false;
+let firstCard, secondCard;
 
 function flipCard() {
-  this.classList.toggle("flip");
- //  for (var i = 0; i < cards.length; i++) {
- //     cards[i].toggle();
- // }
+  if (lockFlip) return;
+  if (this === firstCard) return;
+  this.classList.add("flip");
+  if (!matched) {
+    // first click
+    matched = true;
+    firstCard = this;
+    return;
+  }
+  // second click
+  secondCard = this;
+  match();
+}
+
+function match() {
+  let isMatch = firstCard.dataset.matchinfo === secondCard.dataset.matchinfo;
+  // do cards match?
+  isMatch ? disableCards() : unflipCards();
+}
+
+// its a match!!
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+  resetBoard();
+}
+
+// not a match
+function unflipCards() {
+  lockFlip = true;
+  setTimeout(() => {
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
+    resetBoard();
+  }, 1500);
+}
+
+function resetBoard() {
+  [matched, lockFlip] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
 
 function showInstructions() {
@@ -64,6 +101,10 @@ function interpolatePlayerName2() {
   interpolate3.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-3">${playerOneName.value}</h2>`);
   interpolate4.insertAdjacentHTML("afterbegin", `<h2 class="players-name interpolate-4">${playerTwoName.value}</h2>`);
 }
+
+
+
+
 
 
 
