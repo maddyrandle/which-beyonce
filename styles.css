@@ -162,6 +162,7 @@ button:hover {
   grid-template-areas:
   "left middle right"
   "left middle right";
+  height: 100vh;
 }
 
 .stats-container-1,
@@ -170,7 +171,7 @@ button:hover {
   box-shadow: 1px 1px 5px 1px #3A3838;
   display: flex;
   flex-direction: column;
-  height: 97%;
+  height: 100vh;
   margin: 10px 0;
 }
 
@@ -300,5 +301,9 @@ button:hover {
 }
 
 .hidden {
+  display: none;
+}
+
+.card.hide {
   display: none;
 }
