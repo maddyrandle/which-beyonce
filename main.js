@@ -1,20 +1,21 @@
-var frontPage = document.querySelector(".front-page");
+var cards = document.querySelectorAll(".card");
 var gameBoard = document.querySelector(".gameboard");
 var instructions = document.querySelector(".instruction-page");
 var playButton1 = document.querySelector(".button-1");
 var playButton2 = document.querySelector(".button-2");
 var playerOneName = document.querySelector(".name-input-1");
 var playerTwoName = document.querySelector(".name-input-2");
-var cards = document.querySelectorAll(".card");
 
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
 cards.forEach(card => card.addEventListener("click", flipCard));
 
 let matched = false;
+let lockFlip = false;
 let firstCard, secondCard;
 
 function flipCard() {
+
   this.classList.add("flip");
   if (!matched) {
     // first click
@@ -23,29 +24,30 @@ function flipCard() {
     return;
   }
   // second click
-  secondCard = this;
   matched = false;
-  // do cards match?
+  secondCard = this;
   match();
 }
 
 function match() {
-  let isMatch = firstCard.dataset.matchInfo === secondCard.dataset.matchInfo;
+  let isMatch = firstCard.dataset.matchinfo === secondCard.dataset.matchinfo;
+  // do cards match?
   isMatch ? disableCards() : unflipCards();
 }
 
+// its a match!!
 function disableCards() {
-  // It's a match!
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
 }
 
+// not a match
 function unflipCards() {
-  // Not a match.
+
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
-}, 1500);
+  }, 1500);
 }
 
 function showInstructions() {
