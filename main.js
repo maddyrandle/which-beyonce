@@ -6,14 +6,13 @@ var playButton1 = document.querySelector(".button-1");
 var playButton2 = document.querySelector(".button-2");
 var playerOneName = document.querySelector(".name-input-1");
 var playerTwoName = document.querySelector(".name-input-2");
+var matched = false;
+var lockFlip = false;
+var firstCard, secondCard;
 
 playButton1.addEventListener("click", firstClickOnPlay);
 playButton2.addEventListener("click", secondClickOnPlay);
 cards.forEach(card => card.addEventListener("click", flipCard));
-
-let matched = false;
-let lockFlip = false;
-let firstCard, secondCard;
 
 function flipCard() {
   if (lockFlip) return;
@@ -31,16 +30,20 @@ function flipCard() {
 }
 
 function match() {
-  let isMatch = firstCard.dataset.matchinfo === secondCard.dataset.matchinfo;
+  var isMatch = firstCard.dataset.matchinfo === secondCard.dataset.matchinfo;
   // do cards match?
-  isMatch ? disableCards() : unflipCards();
+  isMatch ? hideCards() : unflipCards();
 }
 
 // its a match!!
-function disableCards() {
-  firstCard.removeEventListener("click", flipCard);
-  secondCard.removeEventListener("click", flipCard);
-  resetBoard();
+function hideCards() {
+  setTimeout(() => {
+    firstCard.classList.add("fade-out");
+    secondCard.classList.add("fade-out");
+    // firstCard.removeEventListener("click", flipCard);
+    // secondCard.removeEventListener("click", flipCard);
+    resetBoard();
+  }, 500);
 }
 
 // not a match
