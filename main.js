@@ -38,12 +38,12 @@ function match() {
 // its a match!!
 function hideCards() {
   setTimeout(() => {
-    firstCard.classList.add("hide");
-    secondCard.classList.add("hide");
+    firstCard.classList.add("fade-out");
+    secondCard.classList.add("fade-out");
     // firstCard.removeEventListener("click", flipCard);
     // secondCard.removeEventListener("click", flipCard);
     resetBoard();
-  }, 1500);
+  }, 500);
 }
 
 // not a match
